@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
+import { useParams } from "react-router-dom";
 
 const Edit = () => {
-  return (
-    <div>Edit</div>
-  )
-}
+  const { id } = useParams();
+  return <div>{id} Edit</div>;
+};
 
-export default Edit
+export default Edit;

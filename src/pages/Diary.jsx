@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { use } from "react";
+import { useParams } from "react-router-dom";
 
 const Diary = () => {
-  return (
-    <div>Diary</div>
-  )
-}
+  const { id } = useParams();
+  return <div>{id} Diary</div>;
+};
 
-export default Diary
+export default Diary;
