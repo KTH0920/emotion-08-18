@@ -1,24 +1,12 @@
-import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import Header from "../components/Header";
-import Button from "../components/Button";
-import Viewer from "../components/Viewer";
+import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const Diary = () => {
-  const { id } = useParams();
-  const nav = useNavigate();
-
+     const {id}=useParams()
+    
   return (
-    <div>
-      <Header
-        leftChild={<Button text={"< 뒤로가기"} onClick={() => nav(-1)} />}
-        title={"yyyy-mm-dd-의 기록"}
-        rightChild={
-          <Button text={"수정하기"} onClick={() => nav(`/edit/${id}`)} />
-        }
-      />
-    </div>
-  );
-};
+    <div>{id} Diary</div>
+  )
+}
 
-export default Diary;
+export default Diary
